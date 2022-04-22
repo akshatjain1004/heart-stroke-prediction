@@ -816,43 +816,54 @@
 
                 <form action="">
                     <h3>Enter Details</h3>
-                    <input type="number" placeholder="your age" class="box">
-                    <input type="text" placeholder="your gender" class="box">
-                    <select class="form-select box" aria-label="Default select example">
+                    <input type="number" placeholder="your age" class="box" name="Age
+                    ">
+                    <input type="text" placeholder="your gender" class="box" name="Sex
+                    ">
+                    <select class="form-select box" aria-label="Default select example" name="ChestPainType
+                    ">
                         <option selected>Choose Chest Pain Type </option>
                         <option value="1">ASY</option>
                         <option value="2">ATA</option>
                         <option value="3">NAP</option>
                         <option value="4">TA</option>
                     </select>
-                    <input type="number" placeholder="Resting BP" class="box">
-                    <input type="number" placeholder="cholestrol" class="box">
-                    <select class="form-select box" aria-label="Default select example">
+                    <input type="number" placeholder="Resting BP" class="box" name="RestingBP
+                    ">
+                    <input type="number" placeholder="cholestrol" class="box" name="Cholesterol
+                    ">
+                    <select class="form-select box" aria-label="Default select example" name="FastingBS
+                    ">
                         <option selected>Fasting BS </option>
                         <option value="1">0</option>
                         <option value="2">1</option>
                     </select>
-                    <select class="form-select box" aria-label="Default select example">
+                    <select class="form-select box" aria-label="Default select example" name="RestingECG
+                    ">
                         <option selected>Resting ECG </option>
                         <option value="1">Normal</option>
                         <option value="2">ST</option>
                         <option value="3">LVH</option>
                     </select>
-                    <input type="number" placeholder="max HR" class="box">
-                    <select class="form-select box" aria-label="Default select example">
+                    <input type="number" placeholder="max HR" class="box" name="MaxHR
+                    ">
+                    <select class="form-select box" aria-label="Default select example" name="ExerciseAngina
+                    ">
                         <option selected>ExerciseAngina
                         </option>
                         <option value="1">Y</option>
                         <option value="2">N</option>
                     </select>
-                    <input type="number" placeholder="old peak" class="box">
-                    <select class="form-select box" aria-label="Default select example">
+                    <input type="number" placeholder="old peak" class="box" name="Oldpeak
+                    ">
+                    <select class="form-select box" aria-label="Default select example" name="ST_Slope
+                    ">
                         <option selected>ST_slope </option>
                         <option value="1">Up</option>
                         <option value="2">Down</option>
                         <option value="3">Flat</option>
                     </select>
-                    <input type="date" class="box" placeholder="Date of Diagnosis">
+                    <input type="date" class="box" placeholder="Date of Diagnosis" name="Date">
                     <input type="submit" value="predict now" class="btn">
                 </form>
 
