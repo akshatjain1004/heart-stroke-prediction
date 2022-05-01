@@ -4,7 +4,7 @@ import pickle
 import pandas as pd
 
 app = Flask(__name__)
-# model = pickle.load(open('model.pkl', 'rb'))
+model = pickle.load(open('saved_model.pkl', 'rb'))
 
 @app.route('/')
 def home():
@@ -26,8 +26,8 @@ def process(form_data):
 def predict():
   
     df = process(request.form)
-    
-    return render_template('predict.html', percent = 89.6)
+    prediction = model.predict(df)[0]
+    return render_template('predict.html', prediction = prediction)
 
 
 if __name__ == "__main__":

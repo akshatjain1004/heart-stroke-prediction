@@ -37,7 +37,13 @@
         </div>
 
         <div class="content">
-            <h3>Your heart is {{percent}}% prone to heart disease</h3>
+            {% if prediction %}
+                <h3>Your heart is at <b>risk</b></h3>
+            
+            {% else %}
+                <h3>Your heart is <b>safe</b></h3>
+            {% endif %}
+           
         </div>
         <a  href="/#predictform" class="btn"> Predict Again< <span class="fas fa-chevron-right"></span> </a>
 
