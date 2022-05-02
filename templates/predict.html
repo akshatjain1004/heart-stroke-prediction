@@ -37,11 +37,14 @@
         </div>
 
         <div class="content">
-            {% if prediction %}
+            {% if (prediction>50) %}
                 <h3>Your heart is at <b>risk</b></h3>
+                <h4>You have <b>{{prediction}}% </b> chance of a heart disease </h4>
+                <h4>Go for diagnosis</h4>
             
             {% else %}
                 <h3>Your heart is <b>safe</b></h3>
+                <h4>You have <b>{{prediction}}% </b> chance of a heart disease </h4>
             {% endif %}
            
         </div>
