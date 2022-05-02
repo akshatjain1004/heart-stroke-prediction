@@ -4,6 +4,7 @@
 import pandas as pd
 import numpy as np
 import pickle
+import warnings
 warnings.filterwarnings('ignore')
 
 df = pd.read_csv('heart.csv')

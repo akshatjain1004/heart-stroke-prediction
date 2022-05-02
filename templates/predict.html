@@ -32,20 +32,45 @@
 
     <section class="home" id="home">
 
-        <div class="image">
-            <img src="../static/image/home-img.svg" alt="">
-        </div>
+        <div id="piechart"></div>
+
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+        <script type="text/javascript">
+            // Load google charts
+            google.charts.load('current', { 'packages': ['corechart'] });
+            google.charts.setOnLoadCallback(drawChart);
+            var risk = parseFloat('{{ prediction }}');
+            // Draw the chart and set the chart values
+            function drawChart() {
+                var data = google.visualization.arrayToDataTable([
+                    ['Condition', '% Risk'],
+                    ['Risk', risk],
+                    ['Safe', 1-risk],
+                ]);
+
+                // Optional; add a title and set the width and height of the chart
+                var options = { 
+                 'width': 500, 
+                 'height': 450,
+                 backgroundColor: 'transparent',colors: ['#ad3434', '#6ab869'] };
+
+                // Display the chart inside the <div> element with id="piechart"
+                var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+                chart.draw(data, options);
+            }
+        </script>
 
         <div class="content">
             {% if prediction %}
-                <h3>Your heart is at <b>risk</b></h3>
-            
+            <h3>Your heart is at <b>risk</b></h3>
+
             {% else %}
-                <h3>Your heart is <b>safe</b></h3>
+            <h3>Your heart is <b>safe</b></h3>
             {% endif %}
-           
+
         </div>
-        <a  href="/#predictform" class="btn"> Predict Again< <span class="fas fa-chevron-right"></span> </a>
+        <a href="/#predictform" class="btn"> Predict Again< <span class="fas fa-chevron-right"></span> </a>
 
 
     </section>
