@@ -10,11 +10,11 @@ from sklearn.compose import ColumnTransformer
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import StandardScaler
 from sklearn.preprocessing import OneHotEncoder
-from sklearn.neural_network import MLPClassifier
+from xgboost import XGBClassifier
 warnings.filterwarnings('ignore')
 
 df = pd.read_csv('heart.csv')
-clf = MLPClassifier(solver= 'lbfgs', random_state= 6, max_iter= 1100, hidden_layer_sizes= 10, alpha= 1e-06)
+clf = XGBClassifier()
 
 # selected features
 selected_features= ['Age', 'Sex', 'ChestPainType', 'FastingBS', 'ExerciseAngina', 'Oldpeak', 'ST_Slope']

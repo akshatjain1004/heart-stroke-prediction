@@ -109,7 +109,6 @@
     </section>
 
 
-<!-- 'Age', 'Sex', 'ChestPainType', 'FastingBS', 'ExerciseAngina', 'Oldpeak', 'ST_Slope' -->
     <section class="book" id="book">
 
         <h1 class="heading"> <span>Predict</span> Now </h1>
@@ -136,7 +135,7 @@
                 <select class="form-select box" name="ChestPainType" aria-label="Default select example">
                     <option value="ASY">ASY</option>
                     <option value="ATA">ATA</option>
-                    <option value="NA{">NAP</option>
+                    <option value="NAP">NAP</option>
                     <option value="TA">TA</option>
                 </select>
 
@@ -154,7 +153,7 @@
                 </select>
 
                 <label for="ST_Slope">Old Peak</label>
-                <input type="number" name="Oldpeak" placeholder="Enter the Old peak value" class="box">
+                <input type="number" step="0.01" name="Oldpeak" placeholder="Enter the Old peak value" class="box">
 
                 <label for="ST_Slope">ST Slope</label>
                 <select class="form-select box" name="ST_Slope" aria-label="Default select example">
