@@ -97,7 +97,9 @@ section:nth-child(even) {
   justify-content: space-between;
   background: #fff;
 }
-
+#predictagain{
+  margin-left: 15vh;
+}
 .header .logo {
   font-size: 2.5rem;
   color: var(--black);

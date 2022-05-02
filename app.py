@@ -26,8 +26,9 @@ def process(form_data):
 def predict():
   
     df = process(request.form)
-    prediction = model.predict(df)[0]
-    return render_template('predict.html', prediction = 0.89)
+    prediction = model.predict_proba(df)[0]
+    # prediction= 86.5
+    return render_template('predict.html', prediction = round(prediction[1]*100,2))
 
 
 if __name__ == "__main__":

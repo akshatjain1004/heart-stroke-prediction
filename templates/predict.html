@@ -32,8 +32,9 @@
 
     <section class="home" id="home">
 
-        <div id="piechart"></div>
-
+        <div class="image">
+            <img src="../static/image/home-img.svg" alt="">
+        </div>
         <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 
         <script type="text/javascript">
@@ -46,7 +47,7 @@
                 var data = google.visualization.arrayToDataTable([
                     ['Condition', '% Risk'],
                     ['Risk', risk],
-                    ['Safe', 1-risk],
+                    ['Safe', 100-risk],
                 ]);
 
                 // Optional; add a title and set the width and height of the chart
@@ -62,15 +63,19 @@
         </script>
 
         <div class="content">
-            {% if prediction %}
-            <h3>Your heart is at <b>risk</b></h3>
-
+            {% if (prediction>50) %}
+                <h3>Your heart is at <b>risk</b></h3>
+                <h4>You have <b>{{prediction}}% </b> chance of a heart disease </h4>
+                <h4>Go for diagnosis</h4>
+            
             {% else %}
-            <h3>Your heart is <b>safe</b></h3>
+                <h3>Your heart is <b>safe</b></h3>
+                <h4>You have <b>{{prediction}}% </b> chance of a heart disease </h4>
             {% endif %}
+            <div id="piechart"></div>
 
+            <a href="/#predictform" id="predictagain" class="btn"> Predict Again< <span class="fas fa-chevron-right"></span> </a>
         </div>
-        <a href="/#predictform" class="btn"> Predict Again< <span class="fas fa-chevron-right"></span> </a>
 
 
     </section>
