@@ -35,4 +35,4 @@ Enter details for prediction in the form
 
 ![image](https://user-images.githubusercontent.com/86458423/166305267-95264d16-e9e5-4c7c-88bd-419672af00c4.png)
 
-Know your Results!!
+Know your Results!!!
